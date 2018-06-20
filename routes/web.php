@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/**
+ * Blog
+ */
+Route::namespace('Blog')->group(function () {
+    Route::get('/', 'IndexController@index');
 });
