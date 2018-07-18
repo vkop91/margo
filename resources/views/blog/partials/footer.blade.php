@@ -1,8 +1,0 @@
-<!-- Footer menu -->
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/posts">Blog</a></li>
-        <li><a href="/about">About</a></li>
-    </ul>
-</nav>

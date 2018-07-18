@@ -1,7 +1,7 @@
-@extends('blog.layouts.page')
+@extends('base.layouts.page')
 
 @section('content')
     <article>
-        <p>Posts</p>
+        <p>Post</p>
     </article>
 @endsection

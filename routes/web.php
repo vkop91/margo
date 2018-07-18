@@ -11,9 +11,31 @@
 |
 */
 
+Route::get('/', 'HomeController@index');
+
+Auth::routes();
+
 /**
  * Blog
  */
 Route::namespace('Blog')->group(function () {
+    Route::resources([
+        'posts' => 'PostController'
+    ]);
+});
+
+
+Route::get('/adminq/', 'Admin\IndexController@index');
+
+/**
+ * Admin
+ */
+Route::namespace('Admin')->prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', 'IndexController@index');
+
+    Route::resources([
+        'roles' => 'RoleController',
+        'posts' => 'PostController',
+        'users' => 'UserController'
+    ]);
 });
